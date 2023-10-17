@@ -24,7 +24,9 @@
                 INNER JOIN
             t_persona AS persona ON usuarios.id_persona = persona.id_persona;";
         $respuesta=mysqli_query($conexion, $sql);
+        
 ?>
+
 <table class="table table-sm dt-responsive nowrap" 
                     id="tablaUsuariosDataTable" style="width:100%">
 <thead>
@@ -38,9 +40,9 @@
     <th>Ubicacion</th>
     <th>Genero</th>
     <th>Reset Password</th>
-    <th>Activar</th>
-    <th>Editar</th>
     <th>Eliminar</th>
+    <th>Editar</th>
+    <th>Activar</th>
 </thead>
 <tbody>
     <?php 
@@ -63,6 +65,20 @@
                 Cambiar password
             </button>
         </td> 
+        <td> 
+            <button class="btn btn-danger btn-sm" 
+            onclick="eliminarUsuario(<?php echo $mostrar['idUsuario']; ?>, <?php echo $mostrar['idPersona']; ?> )">
+                <span class="fas fa-user-times"></span>
+            </button>
+        </td>
+        <td>
+            <button class="btn btn-warning btn-sm" 
+            data-toggle="modal"
+             data-target="#modalActualizarUsuarios"
+             onclick="obtenerDatosUsuario(<?php echo $mostrar['idUsuario']?>)">
+                Editar
+            </button>
+        </td>
         <td>
             <?php  if($mostrar['estatus']==1){
                 ?>
@@ -81,20 +97,6 @@
             }
             ?>
         </td> 
-        <td>
-            <button class="btn btn-warning btn-sm" 
-            data-toggle="modal"
-             data-target="#modalActualizarUsuarios"
-             onclick="obtenerDatosUsuario(<?php echo $mostrar['idUsuario']?>)">
-                Editar
-            </button>
-        </td>
-        <td> 
-            <button class="btn btn-danger btn-sm" 
-            onclick="eliminarUsuario(<?php echo $mostrar['idUsuario']; ?>, <?php echo $mostrar['idPersona']; ?> )">
-                <span class="fas fa-user-times"></span>
-            </button>
-        </td>
         </tr>
         <?php } ?>
     </tbody>
@@ -106,6 +108,7 @@ $(document).ready(function(){
             language : {
                 url: "../publico/datatable/es-ES.json"
             }
+            
         });
 });
 </script>

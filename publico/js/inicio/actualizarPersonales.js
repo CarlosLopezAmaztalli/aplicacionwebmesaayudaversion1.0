@@ -30,6 +30,7 @@ function obtenerDatosPersonalesInicio(idUsuario){
             $('#telefonoInicio').val(respuesta['telefono']);
             $('#correoInicio').val(respuesta['correo']);
             $('#fechaNacInicio').val(respuesta['fechaNacimiento']);
+            $('#imagenInicio').val(respuesta['imagen']);
         }
     });
 }

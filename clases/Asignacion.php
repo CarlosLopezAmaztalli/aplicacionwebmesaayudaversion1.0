@@ -23,7 +23,7 @@
                                             $datos['direccion'],
                                             $datos['descripcion'],
                                             $datos['nombre'],
-                                            $datos['protocolo'],  );
+                                            $datos['protocolo']  );
                                             $respuesta = $query->execute();
                                             $query->close();
                                             return $respuesta;

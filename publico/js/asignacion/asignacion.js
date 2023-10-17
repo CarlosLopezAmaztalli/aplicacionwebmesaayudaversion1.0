@@ -23,6 +23,7 @@ function asignarSistema(){
     return false;
 }
 
+
 function eliminarAsignacion(idAsignacion){
     Swal.fire({
         title: 'Estas seguro de eliminar este registro?',

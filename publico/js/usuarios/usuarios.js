@@ -1,6 +1,7 @@
-
 $(document).ready(function(){
+    
     $('#tablaUsuariosLoad').load("usuarios/tablaUsuarios.php"); 
+    $('#tablaUsuariosSistemaLoad').load("usuarios/tablaUsuariosSistema.php"); 
 });
 
 function agregarNuevoUsuario(){
@@ -12,6 +13,7 @@ function agregarNuevoUsuario(){
             respuesta=respuesta.trim();
             if(respuesta==1){
             $('#tablaUsuariosLoad').load("usuarios/tablaUsuarios.php"); 
+            
             $('#frmAgregarUsuario')[0].reset();
             Swal.fire(":)","El usuario fue agregado con exito","success");
             }else{
@@ -53,6 +55,7 @@ function actualizarUsuario(){
             respuesta = respuesta.trim();
             if(respuesta==1){
                 $('#tablaUsuariosLoad').load("usuarios/tablaUsuarios.php"); 
+              
                 $('#modalActualizarUsuarios').modal('hide');
                 Swal.fire(":)","El usuario fue actualizado con exito","success");
                 }else{
@@ -96,6 +99,7 @@ function cambioEstatusUsuario(idUsuario, estatus){
             respuesta = respuesta.trim();
             if(respuesta==1){
                 $('#tablaUsuariosLoad').load("usuarios/tablaUsuarios.php"); 
+                
                 Swal.fire(":)","El estatus del usuario fue actualizado con exito","success");
                 }else{
                     Swal.fire(":/","Ha sucedido un error, el estatus del usuario no se pudo actualizar"+respuesta,"error");

@@ -18,15 +18,17 @@
                                 telefono = ?,
                                 correo = ?,
                                 fecha_nacimiento = ?
+                                imagen = ?
                             WHERE
                                 id_persona = ?;";
                                 $query = $conexion->prepare($sql);
-                                $query->bind_param("ssssssi", $datos['paterno'],
+                                $query->bind_param("sssssssi", $datos['paterno'],
                                                                 $datos['materno'],
                                                                 $datos['nombre'],
                                                                 $datos['telefono'],
                                                                 $datos['correo'],
                                                                 $datos['fecha'],
+                                                                $datos['imagen'],
                                                                 $idPersona);
                                 $respuesta = $query->execute();
                                 $query->close();

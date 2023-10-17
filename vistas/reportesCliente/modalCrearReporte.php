@@ -1,4 +1,12 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal</title>
+</head>
+<body>
+    
 <!-- Modal -->
 <form id="frmNuevoReporte" method="POST" onsubmit="return agregarNuevoReporte()">
 <div class="modal fade" id="modalCrearReporte" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -40,7 +48,7 @@
                     <?php  } ?>
                 </select>
                 <label for="problema">Describe tu problema</label>
-                <textarea name="problema" id="problema" class="form-control" required></textarea>
+                <textarea name="problema" id="problema" class="form-control" required pattern="^([a-z]+[0-9]{0,2}){5,12}$"></textarea>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
@@ -50,3 +58,9 @@
   </div>
 </div>
 </form>
+</body>
+</html>
+
+
+
+

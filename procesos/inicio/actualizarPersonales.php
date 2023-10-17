@@ -5,7 +5,7 @@
     $idUsuario= $_SESSION['usuario']['id'];
 
     include "../../clases/Inicio.php";
-
+    
     $datos = array(
         'paterno' => $_POST['paternoInicio'],
         'materno' => $_POST['maternoInicio'],
@@ -13,6 +13,7 @@
         'telefono' => $_POST['telefonoInicio'],
         'correo' => $_POST['correoInicio'],
         'fecha' => $_POST['fechaNacInicio'],
+        'imagen' => $_POST['imagenInicio'],
         'idUsuario' => $idUsuario
     );
 

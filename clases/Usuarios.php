@@ -8,9 +8,6 @@
             $sql = "SELECT * FROM t_usuarios WHERE usuario = '$usuario' AND password = '$password'";
             $respuesta = mysqli_query($conexion, $sql);
 
-            
-        
-
             if(mysqli_num_rows($respuesta) > 0){
                 $datosUsuario = mysqli_fetch_array($respuesta);
 
@@ -93,7 +90,9 @@
         persona.fecha_nacimiento AS fechaNacimiento,
         persona.genero AS genero,
         persona.correo AS correo,
-        persona.telefono AS telefono
+        persona.telefono AS telefono,
+        persona.imagen as imagen
+        
     FROM
         t_usuarios AS usuarios
             INNER JOIN
@@ -116,6 +115,7 @@
             'paterno' => $usuario['paterno'],
             'materno' => $usuario['materno'],
             'fechaNacimiento' => $usuario['fechaNacimiento'],
+            'imagen' => $usuario['imagen'],
             'genero' => $usuario['genero'],
             'correo' => $usuario['correo'],
             'telefono' => $usuario['telefono']

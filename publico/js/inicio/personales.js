@@ -11,6 +11,7 @@ function datosPersonalesInicio(idUsuario){
             $('#telefono').text(respuesta['telefono']);
             $('#correo').text(respuesta['correo']);
             $('#edad').text(respuesta['fechaNacimiento']);
+            $('#imagen').text(respuesta['imagen']);
         }
     });
 }

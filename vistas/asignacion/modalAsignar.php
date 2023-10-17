@@ -1,3 +1,11 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modal</title>
+</head>
+<body>
 <!-- Modal -->
 <form id="frmAsignaSistema" method="POST" onsubmit="return asignarSistema()">
 <div class="modal fade" id="modalAsignarSistema" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -57,31 +65,31 @@
         <div class="row">
             <div class="col-sm-4">
                 <label for="aplicacion">Aplicacion</label>
-                <input type="text" name="aplicacion" id="aplicacion" class="form-control">
+                <input type="text" name="aplicacion" id="aplicacion" class="form-control" required pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{2,48}">
             </div>
             <div class="col-sm-4">
                 <label for="funcion">Funcion del sistema</label>
-                <input type="text" name="funcion" id="funcion" class="form-control">
+                <input type="text" name="funcion" id="funcion" class="form-control" required pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{2,48}">
             </div>
             <div class="col-sm-4">
                 <label for="direccion">Direccion alojamiento</label>
-                <input type="text" name="direccion" id="direccion" class="form-control">
+                <input type="text" name="direccion" id="direccion" class="form-control" required pattern="^([a-z]+[0-9]{0,2}){5,12}$">
             </div>
         </div>
         <div class="row">
              <div class="col-sm-12">
                     <label for="descripcion">Descripcion</label>
-                    <textarea name="descripcion" id="descripcion" class="form-control"></textarea>
+                    <textarea name="descripcion" id="descripcion" class="form-control" required pattern="^([a-z]+[0-9]{0,2}){5,12}$"></textarea>
              </div>
         </div>
         <div class="row">
             <div class="col-sm-4">
                 <label for="nombre">Nombre</label>
-                <input type="text" name="nombre" id="nombre" class="form-control">
+                <input type="text" name="nombre" id="nombre" class="form-control" required pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{2,48}">
             </div>
             <div class="col-sm-4">
                 <label for="protocolo">protocolo</label>
-                <input type="text" name="protocolo" id="protocolo" class="form-control">
+                <input type="text" name="protocolo" id="protocolo" class="form-control" required pattern="^([a-z]+[0-9]{0,2}){5,12}$">
             </div>
         </div>
       </div>
@@ -93,3 +101,5 @@
   </div>
 </div>
 </form>
+</body>
+</html>
